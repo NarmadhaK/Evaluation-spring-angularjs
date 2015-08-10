@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<script src="bootstrap/js/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<script src="Registration.js"></script>
+</head>
+</html>
+<body>
+	<div class="container" ng-controller="registrationController">
+		<form class="form-horizontal" action="mapp/login" role="form"
+			name="page" method="POST">
+			<div>
+				<div class="row">
+					<div class="col-sm-10">
+						<h1 class="text-center login-title">
+							<b>WELCOME</b>
+						</h1>
+
+						<div class="form-group">
+							<label class="control-label col-sm-2">UserName</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" name="username"
+									ng-model="user.username" placeholder="Enter name"> <span
+									style="color: violet"
+									ng-show="page.username.$dirty && page.uname.$invalid"> <span
+									ng-show="page.username.$error.required">Please enter the
+										name</span></span>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-2">password</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" name="password"
+									ng-model="user.password" placeholder="Enter password">
+								<span style="color: violet"
+									ng-show="page.password.$dirty && page.password.$invalid">
+									<span ng-show="page.password.$error.required">Please
+										enter the password</span>
+								</span>
+
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-2">Temporary password</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" name="temp_password"
+									ng-model="user.temp_password"
+									placeholder="Enter Temporary password">
+									<span style="color: violet"
+							ng-show="page.temp_password.$dirty && page.temp_password.$invalid">
+							<span ng-show="page.temp_password.$error.required">Please enter
+								the temporary password</span>
+						</span>
+									
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-2">Email address</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" name="email_address"
+									ng-model="user.email_address"
+									placeholder="Enter the Email address">
+									<span style="color: violet"
+							ng-show="page.email_address.$dirty && page.email_address.$invalid">
+							<span ng-show="page.email_address.$error.required">Please enter
+								the email address</span>
+								<span ng-show="myForm.email_address.$error.email">Invalid email address.</span>
+								
+						</span>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="control-label col-sm-2">First Name</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" name="first_name"
+									ng-model="user.first_name" placeholder="First Name">
+									<span style="color: violet"
+							ng-show="page.first_name.$dirty && page.first_name.$invalid">
+							<span ng-show="page.first_name.$error.required">Please enter
+								the first name</span>
+						</span>
+									
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-2">Last Name</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" name="last_name"
+									ng-model="user.last_name" placeholder="Enter the last Name">
+									<span style="color: violet"
+							ng-show="page.last_name.$dirty && page.last_name.$invalid">
+							<span ng-show="page.last_name.$error.required">Please enter
+								the last name</span>
+						</span>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="control-label col-sm-2">Date of Birth</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" name="dob"
+									ng-model="user.dob" placeholder="Enter the Date of Birth">
+									<span style="color: violet"
+							ng-show="page.dob.$dirty && page.dob.$invalid">
+							<span ng-show="page.dob.$error.required">Please enter
+								the date of birth</span>
+						</span>
+									
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="control-label col-sm-2">Age</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" name="age"
+									ng-model="user.age" placeholder="Enter the Age">
+									<span style="color: violet"
+							ng-show="page.age.$dirty && page.age.$invalid">
+							<span ng-show="page.age.$error.required">Please enter
+								the age</span>
+						</span>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="control-label col-sm-2">Sex</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" name="sex"
+									ng-model="user.sex" placeholder="Enter the sex">
+									<span style="color: violet"
+							ng-show="page.sex.$dirty && page.sex.$invalid">
+							<span ng-show="page.sex.$error.required">Please enter
+								the sex</span>
+						</span>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-offset-2 col-sm-10">
+								<button type="submit" class="btn btn-default" ng-click="Register()">Submit</button>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+
+</body>
+</html>
